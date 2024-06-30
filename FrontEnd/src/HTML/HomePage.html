@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMART</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/078e2f97cb.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+  </style>
+</head>
+
+
+<body class=" text-gray-800">
+
+  <!-- NavBar -->
+  <nav class="p-3 w-full h-20 flex justify-left items-center  ">
+    <div class="px-4 py-4">
+      <a href="../HTML/HomePage.html">
+      <img class="w-21 h-20" src="../../img/c.png" alt="Logo">
+    </a>
+    </div>
+
+    <ul class="flex font-semibold text-gray-800 space-x-8 ml-auto">
+      <li>
+        <!-- Search bar added here -->
+        <div class="flex items-center  border border-gray-300 rounded-md focus:outline-none focus:border-white-500">
+          <input type="text" placeholder="Search..." class="px-4  ">
+          <button
+            class="px-4 ml-2 bg-white text-black font-semibold rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <!-- End of search bar -->
+      </li>
+      <!-- cart -->
+      <li><a href="#" class=" hover:font-bold"> </a><i class="fa-solid fa-cart-shopping hover:font-bold"></i></li>
+      <!-- category -->
+      <li><a href="#" class=" hover:font-bold"></a><i class="fa-solid fa-list"></i></li>
+      <!-- profile -->
+      <li><a href="#" class=" hover:font-bold"></a><i class="fa-solid fa-user"></i></li>
+      <li><a href="#" class=" hover:font-bold">LOGIN/SIGNUP</a></li>
+    </ul>
+  </nav>
+  <!-- NavBar -->
+
+  <!-- Cover Image -->
+  <img class="w-full h-100 " src="https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg" alt="">
+  <!-- Cover Image -->
+
+  <!-- Product Cards -->
+  <section class="body-font bg-gray-100 ">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4 justify-center">
+        <!-- card -->
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full bg-white  m-3  transform transition hover:shadow-lg hover:scale-105">
+          <a href="ProductDetails.html" class="block relative h-48 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
+              src="https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg">
+          </a>
+
+          <div class="mt-4">
+            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+            <h2 class="text-gray-900  title-font text-lg font-medium ">The Catalyzer</h2>
+            <p class="mt-1">$16.00</p>
+            <button
+              class="mt-1 bg-blue-600 text-white hover:bg-blue-800 hover:text-white w-full p-1 justify-center rounded">
+              Add to cart <i class="fa-solid fa-cart-shopping hover:font-bold "></i></button>
+          </div>
+        </div>
+      </div>
+      <!-- card -->
+    </div>
+    <!-- Product Cards -->
+    </div>
+  </section>
+
+  <footer class="bg-black text-white py-10">
+    <div class="container mx-auto px-4 flex flex-wrap justify-between">
+      <div class="w-full md:w-1/5 mb-6 md:mb-0">
+        <h4 class="text-lg font-bold mb-2">Contact Us</h4>
+        <p>Email: support@yourwebsite.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Your Street, City, Country</p>
+      </div>
+      <div class="w-full md:w-1/5 mb-6 md:mb-0">
+        <h4 class="text-lg font-bold mb-2">Quick Links</h4>
+        <ul>
+          <li class="mb-2"><a href="/about" class="text-white hover:underline">About Us</a></li>
+          <li class="mb-2"><a href="/faq" class="text-white hover:underline">FAQ</a></li>
+          <li class="mb-2"><a href="/support" class="text-white hover:underline">Customer Support</a></li>
+          <li class="mb-2"><a href="/terms" class="text-white hover:underline">Terms of Service</a></li>
+          <li class="mb-2"><a href="/privacy" class="text-white hover:underline">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="w-full md:w-1/5 mb-6 md:mb-0">
+        <h4 class="text-lg font-bold mb-2">Follow Us</h4>
+        <div class="flex space-x-4">
+          <a href="https://facebook.com/yourpage" target="_blank" class="hover:underline">
+            <img
+              src="./facebook-like-button-login-like-button-facebook-logos-rectangle-icons-black-and-white-symbol-logo.jpg"
+              alt="Facebook" class="h-8 w-8 object-contain">
+          </a>
+          <a href="https://twitter.com/yourpage" target="_blank" class="hover:underline">
+            <img src="./new-twitter-logo-x-icon-black-background_1017-45427.jpg.avif" alt="Twitter"
+              class="h-10 w-10 object-contain">
+          </a>
+          <a href="https://instagram.com/yourpage" target="_blank" class="hover:underline">
+            <img
+              src="./eps10-white-camera-abstract-line-art-icon-isolated-on-black-background-social-media-outline-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-logo-and-mobile-application-vector.jpg"
+              alt="Instagram" class="h-10 w-10 object-contain">
+          </a>
+        </div>
+      </div>
+      <div class="w-full md:w-1/5 mb-6 md:mb-0">
+        <h4 class="text-lg font-bold mb-2">Subscribe to our Newsletter</h4>
+        <form action="/subscribe" method="post" class="flex flex-col">
+          <input type="email" name="email" placeholder="Enter your email" required
+            class="mb-2 px-2 py-1 text-black rounded">
+          <button type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="text-center py-4">
+      <p>© 2024 Your Website Name. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
