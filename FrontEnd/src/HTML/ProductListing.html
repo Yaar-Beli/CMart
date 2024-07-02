@@ -17,7 +17,7 @@
 <body class="text-gray-800">
 
     <!-- NavBar -->
-    <nav class="p-3 w-full h-20 flex justify-left items-center">
+    <nav class="fixed top-0 left-0 right-0 bg-white p-3 w-full h-20 flex justify-left items-center z-50">
         <div class="px-4 py-4">
             <a href="../HTML/HomePage.html">
                 <img class="w-21 h-20" src="../../img/c.png" alt="Logo">
@@ -90,10 +90,10 @@
 
     <!-- Product Cards -->
     <section class="body-font bg-gray-100">
-        <div class="flex flex-wrap -m-4 justify-left">
+        <div class="mt-20 flex flex-wrap -m-4 justify-center">
             <!-- card -->
             <div
-                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-10 ml-10 mb-10 transform transition hover:shadow-lg hover:scale-105">
+                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-5 ml-10 mb-5 transform transition hover:shadow-lg hover:scale-105">
                 <a class="block relative h-48 rounded overflow-hidden">
                     <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                         src="https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg">
@@ -111,7 +111,7 @@
             <!-- card -->
             <!-- card -->
             <div
-                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-10 ml-10 mb-10 transform transition hover:shadow-lg hover:scale-105">
+                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-5 ml-10 mb-5 transform transition hover:shadow-lg hover:scale-105">
                 <a class="block relative h-48 rounded overflow-hidden">
                     <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                         src="https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg">
@@ -129,7 +129,7 @@
             <!-- card -->
             <!-- card -->
             <div
-                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-10 ml-10 mb-10 transform transition hover:shadow-lg hover:scale-105">
+                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-5 ml-10 mb-5 transform transition hover:shadow-lg hover:scale-105">
                 <a class="block relative h-48 rounded overflow-hidden">
                     <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                         src="https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg">
@@ -147,7 +147,7 @@
             <!-- card -->
             <!-- card -->
             <div
-                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-10 ml-10 mb-10 transform transition hover:shadow-lg hover:scale-105">
+                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-5 ml-10 mb-5 transform transition hover:shadow-lg hover:scale-105">
                 <a class="block relative h-48 rounded overflow-hidden">
                     <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                         src="https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg">
@@ -165,7 +165,7 @@
             <!-- card -->
             <!-- card -->
             <div
-                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-10 ml-10 mb-10 transform transition hover:shadow-lg hover:scale-105">
+                class="lg:w-1/5 md:w-1/3 p-4 w-full bg-white mt-5 ml-10 mb-5 transform transition hover:shadow-lg hover:scale-105">
                 <a class="block relative h-48 rounded overflow-hidden">
                     <img alt="ecommerce" class="object-cover object-center w-full h-full block"
                         src="https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg">
@@ -190,12 +190,16 @@
     <!-- Footer -->
     <footer class="bg-black text-white py-10">
         <div class="container mx-auto px-4 flex flex-wrap justify-between">
+            <!-- column 1 -->
             <div class="w-full md:w-1/5 mb-6 md:mb-0">
                 <h4 class="text-lg font-bold mb-2">Contact Us</h4>
                 <p>Email: support@yourwebsite.com</p>
                 <p>Phone: (123) 456-7890</p>
                 <p>Address: 123 Your Street, City, Country</p>
             </div>
+
+
+            <!-- column 2 -->
             <div class="w-full md:w-1/5 mb-6 md:mb-0">
                 <h4 class="text-lg font-bold mb-2">Quick Links</h4>
                 <ul>
@@ -206,6 +210,8 @@
                     <li class="mb-2"><a href="/privacy" class="text-white hover:underline">Privacy Policy</a></li>
                 </ul>
             </div>
+
+            <!-- social media links -->
             <div class="w-full md:w-1/5 mb-6 md:mb-0">
                 <h4 class="text-lg font-bold mb-2">Follow Us</h4>
                 <div class="flex space-x-4">
@@ -213,13 +219,19 @@
                         <img src="../../img/facebook.jpg" alt="Facebook" class="h-8 w-8 object-contain">
                     </a>
                     <a href="https://twitter.com/yourpage" target="_blank" class="hover:underline">
-                        <img src="" alt="Twitter" class="h-10 w-10 object-contain">
+                        <img src="../../img/new-twitter-logo-x-icon-black-background_1017-45427.jpg.avif" alt="Twitter"
+                            class="h-10 w-10 object-contain">
                     </a>
                     <a href="https://instagram.com/yourpage" target="_blank" class="hover:underline">
                         <img src="../../img/Insta.jpg" alt="Instagram" class="h-10 w-10 object-contain">
                     </a>
+
+                    </a>
                 </div>
             </div>
+
+
+            <!-- Newsletter -->
             <div class="w-full md:w-1/5 mb-6 md:mb-0">
                 <h4 class="text-lg font-bold mb-2">Subscribe to our Newsletter</h4>
                 <form action="/subscribe" method="post" class="flex flex-col">
@@ -230,8 +242,12 @@
                 </form>
             </div>
         </div>
-        <div class="text-center py-4">
-            <p>© 2024 Your Website Name. All rights reserved.</p>
+
+        <br><br>
+        <hr class="opacity-30">
+        <!-- copyright -->
+        <div class="pt-4 mx-6 px-4 opacity-40">
+            <p>© 2024 CMart. All rights reserved.</p>
         </div>
     </footer>
 
