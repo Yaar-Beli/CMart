@@ -18,7 +18,7 @@
 
 
   <!-- NavBar -->
-  <nav class="p-3 w-full h-20 flex justify-left items-center">
+  <nav class="fixed top-0 left-0 right-0 p-3 h-20 flex justify-left items-center z-50 bg-white">
     <div class="px-4 py-4">
       <a href="../HTML/HomePage.html">
         <img class="w-21 h-20" src="../../img/c.png" alt="Logo">
@@ -94,7 +94,7 @@
   </nav>
   <!-- NavBar -->
 
-  <div class="relative bg-gray-800 h-screen">
+  <div class="relative h-96">
     <!-- Replace the background image URL with your own -->
     <div class="absolute inset-0 bg-cover bg-center"
       style="background-image: url('https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg');">
@@ -128,12 +128,16 @@
 
   <footer class="bg-black text-white py-10">
     <div class="container mx-auto px-4 flex flex-wrap justify-between">
+      <!-- column 1 -->
       <div class="w-full md:w-1/5 mb-6 md:mb-0">
         <h4 class="text-lg font-bold mb-2">Contact Us</h4>
         <p>Email: support@yourwebsite.com</p>
         <p>Phone: (123) 456-7890</p>
         <p>Address: 123 Your Street, City, Country</p>
       </div>
+
+
+      <!-- column 2 -->
       <div class="w-full md:w-1/5 mb-6 md:mb-0">
         <h4 class="text-lg font-bold mb-2">Quick Links</h4>
         <ul>
@@ -144,11 +148,14 @@
           <li class="mb-2"><a href="/privacy" class="text-white hover:underline">Privacy Policy</a></li>
         </ul>
       </div>
+
+      <!-- social media links -->
       <div class="w-full md:w-1/5 mb-6 md:mb-0">
         <h4 class="text-lg font-bold mb-2">Follow Us</h4>
         <div class="flex space-x-4">
           <a href="https://facebook.com/yourpage" target="_blank" class="hover:underline">
             <img src="../../img/facebook.jpg" alt="Facebook" class="h-8 w-8 object-contain">
+<<<<<<< HEAD
           </a>
           <a href="https://twitter.com/yourpage" target="_blank" class="hover:underline">
             <img src="" alt="Twitter" class="h-10 w-10 object-contain">
@@ -159,19 +166,29 @@
             <img
               src="../../img/facebook-like-button-login-like-button-facebook-logos-rectangle-icons-black-and-white-symbol-logo.jpg"
               alt="Facebook" class="h-8 w-8 object-contain">
+=======
+>>>>>>> 53cbca97402c77ec619dd859dd88cba4fbdb4f7f
           </a>
           <a href="https://twitter.com/yourpage" target="_blank" class="hover:underline">
             <img src="../../img/new-twitter-logo-x-icon-black-background_1017-45427.jpg.avif" alt="Twitter"
               class="h-10 w-10 object-contain">
           </a>
           <a href="https://instagram.com/yourpage" target="_blank" class="hover:underline">
+<<<<<<< HEAD
             <img
               src="../../img/eps10-white-camera-abstract-line-art-icon-isolated-on-black-background-social-media-outline-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-logo-and-mobile-application-vector.jpg"
               alt="Instagram" class="h-10 w-10 object-contain">
+=======
+            <img src="../../img/Insta.jpg" alt="Instagram" class="h-10 w-10 object-contain">
+          </a>
+>>>>>>> 53cbca97402c77ec619dd859dd88cba4fbdb4f7f
 
           </a>
         </div>
       </div>
+
+
+      <!-- Newsletter -->
       <div class="w-full md:w-1/5 mb-6 md:mb-0">
         <h4 class="text-lg font-bold mb-2">Subscribe to our Newsletter</h4>
         <form action="/subscribe" method="post" class="flex flex-col">
@@ -182,8 +199,12 @@
         </form>
       </div>
     </div>
-    <div class="text-center py-4">
-      <p>© 2024 Your Website Name. All rights reserved.</p>
+
+    <br><br>
+    <hr class="opacity-30">
+    <!-- copyright -->
+    <div class="pt-4 mx-6 px-4 opacity-40">
+      <p>© 2024 CMart. All rights reserved.</p>
     </div>
   </footer>
 
