@@ -16,6 +16,7 @@
 
 <body class=" text-black bg-gray-100">
     <!-- NavBar -->
+    <!-- NavBar -->
     <nav class="p-3 w-full h-20 flex justify-left items-center">
         <div class="px-4 py-4">
             <a href="../HTML/HomePage.html">
@@ -40,14 +41,20 @@
                 <!-- End of search bar -->
             </li>
             <!-- cart -->
-            <li><a href="#" class="hover:font-bold"> </a><i class="fa-solid fa-cart-shopping hover:font-bold"></i></li>
+            <li>
+                <a href="../HTML/Cart.html" class="hover:font-bold">
+                    <i class="fa-solid fa-cart-shopping hover:font-bold"></i>
+                </a>
+            </li>
+
             <!-- category -->
             <li><a href="#" class="hover:font-bold"></a><i class="fa-solid fa-list"></i></li>
             <!-- profile -->
-            <li class="relative group">
+            <li class="relative group" onmouseover="showDropdown()" >
                 <a href="#" class="hover:font-bold"></a><i class="fa-solid fa-user"></i>
-                <div
-                    class=" absolute left-1/2 transform -translate-x-1/2 mt-2 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-black dark:divide-gray-600 group-hover:block">
+                <div id="dropdownContent"
+                    class="absolute left-1/2 transform -translate-x-1/2 mt-2 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-black dark:divide-gray-600"
+                    onmouseout="hideDropdown()">
                     <!-- User Details -->
                     <div class="py-2">
                         <a href="#"
@@ -56,7 +63,6 @@
                             <br>
                             7494899798
                         </a>
-
                     </div>
                     <!-- User details Ended -->
                     <!-- option -->
@@ -74,6 +80,7 @@
                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
                         </li>
                     </ul>
+
                     <!-- option ends -->
                     <div class="py-2">
                         <a href="#"
@@ -84,6 +91,8 @@
             <li><a href="../HTML/Login.html" class="hover:font-bold">LOGIN/SIGNUP</a></li>
         </ul>
     </nav>
+    <!-- NavBar -->
+
     <!-- NavBar -->
 
 

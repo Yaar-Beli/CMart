@@ -51,10 +51,11 @@
       <!-- category -->
       <li><a href="#" class="hover:font-bold"></a><i class="fa-solid fa-list"></i></li>
       <!-- profile -->
-      <li class="relative group">
+      <li class="relative group" onmouseover="showDropdown()" >
         <a href="#" class="hover:font-bold"></a><i class="fa-solid fa-user"></i>
-        <div
-          class=" absolute left-1/2 transform -translate-x-1/2 mt-2 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-black dark:divide-gray-600 group-hover:block">
+        <div id="dropdownContent"
+          class="absolute left-1/2 transform -translate-x-1/2 mt-2 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-black dark:divide-gray-600"
+          onmouseout="hideDropdown()">
           <!-- User Details -->
           <div class="py-2">
             <a href="#"
@@ -63,7 +64,6 @@
               <br>
               7494899798
             </a>
-
           </div>
           <!-- User details Ended -->
           <!-- option -->
@@ -81,6 +81,7 @@
                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
             </li>
           </ul>
+
           <!-- option ends -->
           <div class="py-2">
             <a href="#"
@@ -147,14 +148,14 @@
         <h4 class="text-lg font-bold mb-2">Follow Us</h4>
         <div class="flex space-x-4">
           <a href="https://facebook.com/yourpage" target="_blank" class="hover:underline">
-            <<<<<<< HEAD <img src="../../img/facebook.jpg" alt="Facebook" class="h-8 w-8 object-contain">
+            <img src="../../img/facebook.jpg" alt="Facebook" class="h-8 w-8 object-contain">
           </a>
           <a href="https://twitter.com/yourpage" target="_blank" class="hover:underline">
             <img src="" alt="Twitter" class="h-10 w-10 object-contain">
           </a>
           <a href="https://instagram.com/yourpage" target="_blank" class="hover:underline">
             <img src="../../img/Insta.jpg" alt="Instagram" class="h-10 w-10 object-contain">
-            =======
+
             <img
               src="../../img/facebook-like-button-login-like-button-facebook-logos-rectangle-icons-black-and-white-symbol-logo.jpg"
               alt="Facebook" class="h-8 w-8 object-contain">
@@ -167,7 +168,7 @@
             <img
               src="../../img/eps10-white-camera-abstract-line-art-icon-isolated-on-black-background-social-media-outline-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-logo-and-mobile-application-vector.jpg"
               alt="Instagram" class="h-10 w-10 object-contain">
-            >>>>>>> a62d83f5344760894d181f413910b275f2dd6b00
+
           </a>
         </div>
       </div>
