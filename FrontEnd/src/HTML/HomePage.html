@@ -17,83 +17,10 @@
 <body class="text-gray-900">
 
 
-  <!-- NavBar -->
-  <nav class="fixed top-0 left-0 right-0 p-3 h-20 flex justify-left items-center z-50 bg-white">
-    <div class="px-4 py-4">
-      <a href="../HTML/HomePage.html">
-        <img class="w-21 h-20" src="../../img/c.png" alt="Logo">
-      </a>
-    </div>
 
-    <ul class="flex font-semibold text-gray-800 space-x-8 ml-auto">
-      <li>
-        <!-- Search bar added here -->
-        <form action="ProductListing.html" method="get"
-          class="flex items-center  bg-gray-200  rounded-full shadow-lg px-4 ">
-          <!-- Input field -->
-          <input type="text" name="query" placeholder="Search..."
-            class="px-4  rounded-full bg-gray-200 focus:outline-none" required>
 
-          <!-- Search button -->
-          <button type="submit" class="px-4  bg-gray-200 text-black font-semibold rounded-full ">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-        <!-- End of search bar -->
-      </li>
-      <!-- cart -->
-      <li>
-        <a href="../HTML/Cart.html" class="hover:font-bold">
-          <i class="fa-solid fa-cart-shopping hover:font-bold"></i>
-        </a>
-      </li>
-
-      <!-- category -->
-      <li><a href="#" class="hover:font-bold"></a><i class="fa-solid fa-list"></i></li>
-      <!-- profile -->
-      <li class="relative group" onmouseover="showDropdown()" >
-        <a href="#" class="hover:font-bold"></a><i class="fa-solid fa-user"></i>
-        <div id="dropdownContent"
-          class="absolute left-1/2 transform -translate-x-1/2 mt-2 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-black dark:divide-gray-600"
-          onmouseout="hideDropdown()">
-          <!-- User Details -->
-          <div class="py-2">
-            <a href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-              Name
-              <br>
-              7494899798
-            </a>
-          </div>
-          <!-- User details Ended -->
-          <!-- option -->
-          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
-            <li>
-              <a href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Account</a>
-            </li>
-            <li>
-              <a href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orders</a>
-            </li>
-            <li>
-              <a href="#"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-            </li>
-          </ul>
-
-          <!-- option ends -->
-          <div class="py-2">
-            <a href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logout</a>
-          </div>
-        </div>
-      </li>
-      <li><a href="../HTML/Login.html" class="hover:font-bold">LOGIN/SIGNUP</a></li>
-    </ul>
-  </nav>
-  <!-- NavBar -->
-
+  <div id="navbar"></div>
+  
   <div class="relative h-96">
     <!-- Replace the background image URL with your own -->
     <div class="absolute inset-0 bg-cover bg-center"
@@ -101,110 +28,8 @@
     </div>
   </div>
 
-  <!-- Product Cards -->
-  <section class="body-font bg-gray-100 ">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap -m-4 justify-center">
-        <!-- card -->
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full bg-white m-3 transform transition hover:shadow-lg hover:scale-105">
-          <a href="ProductDetails.html" class="block relative h-48 rounded overflow-hidden">
-            <img alt="ecommerce" class="object-cover object-center w-full h-full block"
-              src="https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg">
-          </a>
-          <div class="mt-4">
-            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-            <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
-            <p class="mt-1">$16.00</p>
-            <button
-              class="mt-1 bg-blue-600 text-white hover:bg-blue-800 hover:text-white w-full p-1 justify-center rounded">
-              Add to cart <i class="fa-solid fa-cart-shopping hover:font-bold"></i></button>
-          </div>
-        </div>
-      </div>
-      <!-- card -->
-    </div>
-    <!-- Product Cards -->
-  </section>
-
-  <footer class="bg-black text-white py-10">
-    <div class="container mx-auto px-4 flex flex-wrap justify-between">
-      <!-- column 1 -->
-      <div class="w-full md:w-1/5 mb-6 md:mb-0">
-        <h4 class="text-lg font-bold mb-2">Contact Us</h4>
-        <p>Email: support@yourwebsite.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Address: 123 Your Street, City, Country</p>
-      </div>
-
-
-      <!-- column 2 -->
-      <div class="w-full md:w-1/5 mb-6 md:mb-0">
-        <h4 class="text-lg font-bold mb-2">Quick Links</h4>
-        <ul>
-          <li class="mb-2"><a href="/about" class="text-white hover:underline">About Us</a></li>
-          <li class="mb-2"><a href="/faq" class="text-white hover:underline">FAQ</a></li>
-          <li class="mb-2"><a href="/support" class="text-white hover:underline">Customer Support</a></li>
-          <li class="mb-2"><a href="/terms" class="text-white hover:underline">Terms of Service</a></li>
-          <li class="mb-2"><a href="/privacy" class="text-white hover:underline">Privacy Policy</a></li>
-        </ul>
-      </div>
-
-      <!-- social media links -->
-      <div class="w-full md:w-1/5 mb-6 md:mb-0">
-        <h4 class="text-lg font-bold mb-2">Follow Us</h4>
-        <div class="flex space-x-4">
-          <a href="https://facebook.com/yourpage" target="_blank" class="hover:underline">
-            <img src="../../img/facebook.jpg" alt="Facebook" class="h-8 w-8 object-contain">
-
-          </a>
-          <a href="https://twitter.com/yourpage" target="_blank" class="hover:underline">
-            <img src="../../img/new-twitter-logo-x-icon-black-background_1017-45427.jpg.avif" alt="Twitter" class="h-10 w-10 object-contain">
-          </a>
-          <a href="https://instagram.com/yourpage" target="_blank" class="hover:underline">
-            <img src="../../img/Insta.jpg" alt="Instagram" class="h-10 w-10 object-contain">
-
-            <!-- <img
-              src="../../img/facebook-like-button-login-like-button-facebook-logos-rectangle-icons-black-and-white-symbol-logo.jpg"
-              alt="Facebook" class="h-8 w-8 object-contain"> -->
-
-          <!-- </a>
-          <a href="https://twitter.com/yourpage" target="_blank" class="hover:underline">
-            <img src="../../img/new-twitter-logo-x-icon-black-background_1017-45427.jpg.avif" alt="Twitter"
-              class="h-10 w-10 object-contain">
-          </a>
-          <a href="https://instagram.com/yourpage" target="_blank" class="hover:underline">
-
-            <img
-              src="../../img/eps10-white-camera-abstract-line-art-icon-isolated-on-black-background-social-media-outline-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-logo-and-mobile-application-vector.jpg"
-              alt="Instagram" class="h-10 w-10 object-contain">
-
-            <img src="../../img/Insta.jpg" alt="Instagram" class="h-10 w-10 object-contain">
-          </a> -->
-
-          </a>
-        </div>
-      </div>
-
-
-      <!-- Newsletter -->
-      <div class="w-full md:w-1/5 mb-6 md:mb-0">
-        <h4 class="text-lg font-bold mb-2">Subscribe to our Newsletter</h4>
-        <form action="/subscribe" method="post" class="flex flex-col">
-          <input type="email" name="email" placeholder="Enter your email" required
-            class="mb-2 px-2 py-1 text-black rounded">
-          <button type="submit"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Subscribe</button>
-        </form>
-      </div>
-    </div>
-
-    <br><br>
-    <hr class="opacity-30">
-    <!-- copyright -->
-    <div class="pt-4 mx-6 px-4 opacity-40">
-      <p>© 2024 CMart. All rights reserved.</p>
-    </div>
-  </footer>
+  <div id="card"></div>
+  <div id="footer"></div>
 
   <script>
     function showDropdown() {
@@ -214,7 +39,25 @@
     function hideDropdown() {
       document.getElementById('dropdownContent').classList.add('hidden');
     }
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+      Promise.all([
+        fetch('navbar.html').then(response => response.text()),
+        fetch('Card.html').then(response => response.text()),
+        fetch('Footer.html').then(response => response.text())
+      ]).then(data => {
+        document.getElementById('navbar').innerHTML = data[0];
+        document.getElementById('card').innerHTML = data[1];
+        document.getElementById('footer').innerHTML = data[2];
+      });
+    });
   </script>
+
+
+
+
 </body>
 
 </html>

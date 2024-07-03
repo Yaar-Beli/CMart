@@ -15,85 +15,7 @@
 </head>
 
 <body class=" text-black bg-gray-100">
-    <!-- NavBar -->
-    <!-- NavBar -->
-    <nav class="p-3 w-full h-20 flex justify-left items-center">
-        <div class="px-4 py-4">
-            <a href="../HTML/HomePage.html">
-                <img class="w-21 h-20" src="../../img/c.png" alt="Logo">
-            </a>
-        </div>
-
-        <ul class="flex font-semibold text-gray-800 space-x-8 ml-auto">
-            <li>
-                <!-- Search bar added here -->
-                <form action="ProductListing.html" method="get"
-                    class="flex items-center  bg-gray-200  rounded-full shadow-lg px-4 ">
-                    <!-- Input field -->
-                    <input type="text" name="query" placeholder="Search..."
-                        class="px-4  rounded-full bg-gray-200 focus:outline-none" required>
-
-                    <!-- Search button -->
-                    <button type="submit" class="px-4  bg-gray-200 text-black font-semibold rounded-full ">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </form>
-                <!-- End of search bar -->
-            </li>
-            <!-- cart -->
-            <li>
-                <a href="../HTML/Cart.html" class="hover:font-bold">
-                    <i class="fa-solid fa-cart-shopping hover:font-bold"></i>
-                </a>
-            </li>
-
-            <!-- category -->
-            <li><a href="#" class="hover:font-bold"></a><i class="fa-solid fa-list"></i></li>
-            <!-- profile -->
-            <li class="relative group" onmouseover="showDropdown()" >
-                <a href="#" class="hover:font-bold"></a><i class="fa-solid fa-user"></i>
-                <div id="dropdownContent"
-                    class="absolute left-1/2 transform -translate-x-1/2 mt-2 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-black dark:divide-gray-600"
-                    onmouseout="hideDropdown()">
-                    <!-- User Details -->
-                    <div class="py-2">
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
-                            Name
-                            <br>
-                            7494899798
-                        </a>
-                    </div>
-                    <!-- User details Ended -->
-                    <!-- option -->
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
-                        <li>
-                            <a href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Account</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orders</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                        </li>
-                    </ul>
-
-                    <!-- option ends -->
-                    <div class="py-2">
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logout</a>
-                    </div>
-                </div>
-            </li>
-            <li><a href="../HTML/Login.html" class="hover:font-bold">LOGIN/SIGNUP</a></li>
-        </ul>
-    </nav>
-    <!-- NavBar -->
-
-    <!-- NavBar -->
+    <div id="navbar"></div>
 
 
     <section class="text-gray-600 body-font overflow-hidden">
@@ -197,61 +119,13 @@
         </div>
     </section>
     <!--Main content ends-->
-    <!--Main content ends-->
+
 
     <!--Footer-->
-    <footer class="bg-black text-white py-10">
-        <div class="container mx-auto px-4 flex flex-wrap justify-between">
-            <div class="w-full md:w-1/5 mb-6 md:mb-0">
-                <h4 class="text-lg font-bold mb-2">Contact Us</h4>
-                <p>Email: support@yourwebsite.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Address: 123 Your Street, City, Country</p>
-            </div>
-            <div class="w-full md:w-1/5 mb-6 md:mb-0">
-                <h4 class="text-lg font-bold mb-2">Quick Links</h4>
-                <ul>
-                    <li class="mb-2"><a href="/about" class="text-white hover:underline">About Us</a></li>
-                    <li class="mb-2"><a href="/faq" class="text-white hover:underline">FAQ</a></li>
-                    <li class="mb-2"><a href="/support" class="text-white hover:underline">Customer Support</a></li>
-                    <li class="mb-2"><a href="/terms" class="text-white hover:underline">Terms of Service</a></li>
-                    <li class="mb-2"><a href="/privacy" class="text-white hover:underline">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="w-full md:w-1/5 mb-6 md:mb-0">
-                <h4 class="text-lg font-bold mb-2">Follow Us</h4>
-                <div class="flex space-x-4">
-                    <a href="https://facebook.com/yourpage" target="_blank" class="hover:underline">
-                        <img src="../../img/facebook.jpg" alt="Facebook" class="h-8 w-8 object-contain">
-                    </a>
-                    <a href="https://twitter.com/yourpage" target="_blank" class="hover:underline">
-                        <img src="../../img/new-twitter-logo-x-icon-black-background_1017-45427.jpg.avif" alt="Twitter" class="h-10 w-10 object-contain">
-                    </a>
-                    <a href="https://instagram.com/yourpage" target="_blank" class="hover:underline">
-                        <img src="../../img/Insta.jpg" alt="Instagram" class="h-10 w-10 object-contain">
-                    </a>
-                </div>
-            </div>
-            <div class="w-full md:w-1/5 mb-6 md:mb-0">
-                <h4 class="text-lg font-bold mb-2">Subscribe to our Newsletter</h4>
-                <form action="/subscribe" method="post" class="flex flex-col">
-                    <input type="email" name="email" placeholder="Enter your email" required
-                        class="mb-2 px-2 py-1 text-black rounded">
-                    <button type="submit"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="text-center py-4">
-            <p>© 2024 Your Website Name. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
     <!--Footer ends-->
-    </div>
-    <div class="text-center py-4">
-        <p>© 2024 CMART. All rights reserved.</p>
-    </div>
+
 
 
     <script>
@@ -262,6 +136,17 @@
         function hideDropdown() {
             document.getElementById('dropdownContent').classList.add('hidden');
         }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            Promise.all([
+                fetch('navbar.html').then(response => response.text()),
+                fetch('Footer.html').then(response => response.text())
+            ]).then(data => {
+                document.getElementById('navbar').innerHTML = data[0];
+                document.getElementById('footer').innerHTML = data[1];
+            });
+        });
     </script>
 </body>
 
