@@ -10,16 +10,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-
 <body class="">
 
+  <div id="navbar"></div>
 
- <div id = "navbar"></div>
-
- 
-  <main class="flex flex-row space-x-6 p-4 bg-gray-100">
+  <main class="flex flex-row space-x-6 p-4 bg-gray-100 mt-20">
     <div class="flex-1 space-y-4">
-      <!-- <h2 class="text-2xl font-bold mb-4"> Your Cart</h2> -->
+      <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
       <div class="bg-white p-4 rounded shadow flex justify-between items-center">
         <div class="flex items-center space-x-4">
           <img src="https://via.placeholder.com/50" alt="Heirloom tomato" class="w-16 h-16 object-cover">
@@ -43,7 +40,7 @@
           </div>
         </div>
         <div class="flex items-center space-x-2">
-          <input type="number" value="0.5" class="w-16 border border-gray-300 rounded p-1">
+          <input type="number" value="0.5" step="0.01" class="w-16 border border-gray-300 rounded p-1">
           <span>$6.50</span>
         </div>
       </div>
@@ -63,7 +60,7 @@
       </div>
     </div>
 
-    <div class="w-1/3 h-1/3 bg-white p-4 rounded shadow">
+    <div class="w-1/3 h-1/3 bg-white p-4 rounded shadow mt-12">
       <h2 class="text-xl font-bold mb-2">Order summary</h2>
       <div class="space-y-1">
         <div class="flex justify-between">
@@ -86,27 +83,24 @@
       <button class="w-full hover:bg-gray-600 bg-black text-white py-2 mt-4 rounded">Continue to payment</button>
     </div>
   </main>
-  </div>
-
 
   <script>
     function showDropdown() {
-        document.getElementById('dropdownContent').classList.remove('hidden');
+      document.getElementById('dropdownContent').classList.remove('hidden');
     }
 
     function hideDropdown() {
-        document.getElementById('dropdownContent').classList.add('hidden');
+      document.getElementById('dropdownContent').classList.add('hidden');
     }
 
-    
-document.addEventListener('DOMContentLoaded', function() {
-  fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
           document.getElementById('navbar').innerHTML = data;
-      });
-});
-</script>
+        });
+    });
+  </script>
 </body>
 
 </html>
