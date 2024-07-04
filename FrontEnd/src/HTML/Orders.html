@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/078e2f97cb.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <div id="navbar"></div>
+
+    <div class="min-h-screen flex flex-col">
+
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <h2 class="text-xl font-semibold mb-4">Your Orders</h2>
+
+
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <table class="min-w-full leading-normal">
+                    <thead>
+                        <tr>
+                            <th class="px-5 py-3 bg-gray-200 text-gray-700 text-left text-sm uppercase font-semibold">
+                                Order ID
+                            </th>
+                            <th class="px-5 py-3 bg-gray-200 text-gray-700 text-left text-sm uppercase font-semibold">
+                                Date
+                            </th>
+                            <th class="px-5 py-3 bg-gray-200 text-gray-700 text-left text-sm uppercase font-semibold">
+                                Status
+                            </th>
+                            <th class="px-5 py-3 bg-gray-200 text-gray-700 text-left text-sm uppercase font-semibold">
+                                Total
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Order -->
+                        <tr>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900">123456</p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900">2023-06-30</p>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <span
+                                    class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                                    <span aria-hidden
+                                        class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                                    <span class="relative">Delivered</span>
+                                </span>
+                            </td>
+                            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                <p class="text-gray-900">$100.00</p>
+                            </td>
+                        </tr>
+                        <!-- Add more orders as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Footer -->
+
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Promise.all([
+                fetch('navbar.html').then(response => response.text()),
+                fetch('Card.html').then(response => response.text()),
+                fetch('Footer.html').then(response => response.text())
+            ]).then(data => {
+                document.getElementById('navbar').innerHTML = data[0];
+                document.getElementById('card').innerHTML = data[1];
+                document.getElementById('footer').innerHTML = data[2];
+            });
+        });</script>
+
+</body>
+
+</html>

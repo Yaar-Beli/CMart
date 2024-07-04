@@ -15,10 +15,6 @@
 </head>
 
 <body class="text-gray-900">
-
-
-
-
   <div id="navbar"></div>
   
   <div class="relative h-96">
@@ -27,6 +23,9 @@
       style="background-image: url('https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg');">
     </div>
   </div>
+  <h1 class="text-center text-black">PRODUCTS</h1>
+
+
 
   <div id="card"></div>
   <div id="footer"></div>
@@ -40,8 +39,6 @@
       document.getElementById('dropdownContent').classList.add('hidden');
     }
 
-
-
     document.addEventListener('DOMContentLoaded', function () {
       Promise.all([
         fetch('navbar.html').then(response => response.text()),
@@ -54,10 +51,6 @@
       });
     });
   </script>
-
-
-
-
 </body>
 
 </html>
