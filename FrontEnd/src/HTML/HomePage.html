@@ -40,7 +40,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       Promise.all([
         fetch('navbar.html').then(response => response.text()),
-        fetch('HomeCard.html').then(response => response.text()),
+        fetch('Card.html').then(response => response.text()),
         fetch('Footer.html').then(response => response.text())
       ]).then(data => {
         document.getElementById('navbar').innerHTML = data[0];
