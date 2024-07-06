@@ -14,17 +14,18 @@
   </style>
 </head>
 
-<body class="text-gray-900">
+<body class="text-gray-900 bg-gray-100">
   <div id="navbar"></div>
   
-  <div class="relative h-96">
-    <!-- Replace the background image URL with your own -->
+  <div class="relative h-96 ">
     <div class="absolute inset-0 bg-cover bg-center"
       style="background-image: url('https://i.pinimg.com/474x/c9/46/53/c946536be7c157ed017403815aa2604f.jpg');">
     </div>
   </div>
-  
-  <div id="card"></div>
+
+
+
+  <div id="card" class="mt-0"></div>
   <div id="footer"></div>
 
   <script>
@@ -39,7 +40,7 @@
     document.addEventListener('DOMContentLoaded', function () {
       Promise.all([
         fetch('navbar.html').then(response => response.text()),
-        fetch('Card.html').then(response => response.text()),
+        fetch('HomeCard.html').then(response => response.text()),
         fetch('Footer.html').then(response => response.text())
       ]).then(data => {
         document.getElementById('navbar').innerHTML = data[0];
