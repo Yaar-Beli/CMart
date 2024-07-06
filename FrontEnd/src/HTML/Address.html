@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Address</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/078e2f97cb.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- <div id="navbar"></div> -->
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-6">Add Address</h1>
+        <div class="flex justify-between">
+            <!-- Form to Add Address -->
+            <div class="bg-white p-8 rounded-lg shadow-lg w-full md:w-1/2 mb-6 md:mb-0">
+                <h2 class="text-2xl font-bold mb-6">Recipient's Information</h2>
+                <form action="/submit-address" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name and Surname*</label>
+                        <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md"
+                            placeholder="John Doe" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number*</label>
+                        <input type="text" id="phone" name="phone" class="mt-1 p-2 w-full border rounded-md"
+                            placeholder="+49 179 111 1010" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address*</label>
+                        <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md"
+                            placeholder="orders@example.com" required>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-6">Shipping Address</h2>
+                    <div class="mb-4">
+                        <label for="addressTitle" class="block text-sm font-medium text-gray-700">Address Title
+                            (Optional)</label>
+                        <input type="text" id="addressTitle" name="addressTitle"
+                            class="mt-1 p-2 w-full border rounded-md" placeholder="Home">
+                    </div>
+                    <div class="mb-4">
+                        <label for="address" class="block text-sm font-medium text-gray-700">Address*</label>
+                        <input type="text" id="address" name="address" class="mt-1 p-2 w-full border rounded-md"
+                            placeholder="Leibnizstraße 16, Wohnheim 6, No: 8X" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="address2" class="block text-sm font-medium text-gray-700">Street Address 2
+                            (Optional)</label>
+                        <input type="text" id="address2" name="address2" class="mt-1 p-2 w-full border rounded-md"
+                            placeholder="Apt, Suite, etc.">
+                    </div>
+                    <div class="mb-4">
+                        <label for="city" class="block text-sm font-medium text-gray-700">City*</label>
+                        <select id="city" name="city" class="mt-1 p-2 w-full border rounded-md" required>
+                            <option value="Clausthal-Zellerfeld">Clausthal-Zellerfeld</option>
+                            <!-- Add other cities as needed -->
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="country" class="block text-sm font-medium text-gray-700">Country*</label>
+                        <select id="country" name="country" class="mt-1 p-2 w-full border rounded-md" required>
+                            <option value="Germany">Germany</option>
+                            <!-- Add other countries as needed -->
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <input type="checkbox" id="sameAsDelivery" name="sameAsDelivery" class="mr-2">
+                        <label for="sameAsDelivery" class="text-sm font-medium text-gray-700">Same as delivery
+                            address.</label>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-6">Billing Information</h2>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700">Billing Type*</label>
+                        <div class="mt-2 flex items-center">
+                            <input type="radio" id="personal" name="billingType" value="personal" class="mr-2" required>
+                            <label for="personal" class="mr-6">Personal</label>
+                            <input type="radio" id="commercial" name="billingType" value="commercial" class="mr-2"
+                                required>
+                            <label for="commercial">Commercial</label>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="reset"
+                            class="bg-gray-500 text-white px-4 py-2 rounded-md mr-2 hover:bg-gray-600">Cancel</button>
+                        <button type="submit"
+                            class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Save</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Display Already Added Addresses -->
+            <div class="bg-white p-8 rounded-lg shadow-lg w-full md:w-1/2 relative">
+                <h2 class="text-2xl font-bold mb-6">Already Added Addresses</h2>
+                <div class="mb-4 p-4 border rounded-md">
+                    <input type="checkbox" class=""">     
+                    <h3 class=" text-xl font-bold mb-2">Home</h3>
+                    <p>Banu Elson</p>
+                    <p>Leibnizstraße 16, Wohnheim 6, No: 8X</p>
+                    <p>Clausthal-Zellerfeld, Germany</p>
+                    <p>Phone: +49 179 111 1010</p>
+                    <p>Email: orders@banuelseon.com</p>
+                </div>
+                <div class="text-right">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Use this
+                        address</button>
+                </div>
+                <!-- Add more addresses as needed -->
+            </div>
+
+        </div>
+    </div>
+   
+
+    <script>
+        function showDropdown() {
+            document.getElementById('dropdownContent').classList.remove('hidden');
+        }
+
+        function hideDropdown() {
+            document.getElementById('dropdownContent').classList.add('hidden');
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            Promise.all([
+                fetch('navbar.html').then(response => response.text()),
+                fetch('Footer.html').then(response => response.text())
+            ]).then(data => {
+                document.getElementById('navbar').innerHTML = data[0];
+                document.getElementById('footer').innerHTML = data[1];
+            });
+        });
+
+    </script>
+</body>
+
+</html>
