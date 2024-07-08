@@ -1,5 +1,5 @@
 <!-- NavBar -->
-<nav class="fixed top-0 left-0 right-0 p-3 h-20 flex justify-left items-center z-50 bg-white">
+<nav class="fixed top-0 left-0 right-0 p-3 h-20 flex justify-left items-center z-50 bg-white border-b-2 border-gray-200">
     <div class="px-4 py-4">
         <a href="../HTML/HomePage.html">
             <img class="w-21 h-20" src="../../img/c.png" alt="Logo">
@@ -33,47 +33,48 @@
         <!-- category -->
         <li class=" hover:text-gray-500"><a href="#"></a><i class="fa-solid fa-list"></i></li>
         <!-- profile -->
-        <li class="relative group" onmouseover="showDropdown()">
+<!-- profile -->
+<li class="relative group" onmouseover="showDropdown()">
 
-            <div class="hover:text-gray-500">
-                <a href="#" class="hover:font-bold"></a><i class="fa-solid fa-user"></i>
-                <div id="dropdownContent"
-                    class="absolute left-1/2 transform -translate-x-1/2 mt-2 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-black dark:divide-gray-600"
-                    onmouseout="hideDropdown()">
-                    <!-- User Details -->
-                    <div class="py-2">
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-black dark:text-gray-200 dark:hover:text-white">
-                            Name
-                            <br>
-                            7494899798
-                        </a>
-                    </div>
-                    <!-- User details Ended -->
-                    <!-- option -->
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
-                        <li>
-                            <a href="../HTML/AccountDetails.html"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Account</a>
-                        </li>
-                        <li>
-                            <a href="../HTML/Orders.html"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orders</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                        </li>
-                    </ul>
-
-                    <!-- option ends -->
-                    <div class="py-2">
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Logout</a>
-                    </div>
-                </div>
+    <div class="hover:text-gray-500">
+        <a href="#" class="hover:font-bold"></a><i class="fa-solid fa-user"></i>
+        <div id="dropdownContent"
+            class="absolute left-1/2 transform -translate-x-1/2 mt-2 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            onmouseout="hideDropdown()">
+            <!-- User Details -->
+            <div class="py-2 ">
+                
+                   <div class="block px-2 py-2 text-xs text-black  hover:bg-white  ">
+                    Name
+                    <br>
+                    7494899798
+                </div> 
+                    
+                    
+             
             </div>
-        </li>
+            <!-- User details Ended -->
+            <!-- option -->
+            <ul class="py-1 text-xs text-gray-400" aria-labelledby="dropdownDividerButton">
+                <li>
+                    <a href="../HTML/AccountDetails.html"
+                        class="block px-2 py-1 hover:bg-white hover:text-black hover:font-bold">Account</a>
+                </li>
+                <li>
+                    <a href="../HTML/Orders.html"
+                        class="block px-2 py-1 hover:bg-white hover:text-black hover:font-bold">Orders</a>
+                </li>
+            </ul>
+            <!-- option ends -->
+            <div class="py-1 text-xs text-gray-200">
+                <a href="#"
+                    class="block px-2 py-1 text-xs text-gray-400 hover:bg-white hover:text-black hover:font-bold">Logout</a>
+            </div>
+        </div>
+    </div>
+</li>
+
+
         <li><a href="../HTML/Login.html" class="hover:text-gray-500">Login</a></li>
     </ul>
 </nav>

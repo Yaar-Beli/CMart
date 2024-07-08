@@ -20,26 +20,7 @@
     <div id="card"></div>
     <div id="footer"></div>
 
-    <script>
-        function showDropdown() {
-            document.getElementById('dropdownContent').classList.remove('hidden');
-        }
-        function hideDropdown() {
-            document.getElementById('dropdownContent').classList.add('hidden');
-        }
-        document.addEventListener('DOMContentLoaded', function () {
-            Promise.all([
-                fetch('navbar.html').then(response => response.text()),
-                fetch('Card.html').then(response => response.text()),
-                fetch('Footer.html').then(response => response.text())
-            ]).then(data => {
-                document.getElementById('navbar').innerHTML = data[0];
-                document.getElementById('card').innerHTML = data[1];
-                document.getElementById('footer').innerHTML = data[2];
-            });
-        });
-
-    </script>
+    <script src="script.js"> </script>
 
 </body>
 

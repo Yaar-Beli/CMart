@@ -115,25 +115,7 @@
     </div>
    
 
-    <script>
-        function showDropdown() {
-            document.getElementById('dropdownContent').classList.remove('hidden');
-        }
-
-        function hideDropdown() {
-            document.getElementById('dropdownContent').classList.add('hidden');
-        }
-        document.addEventListener('DOMContentLoaded', function () {
-            Promise.all([
-                fetch('navbar.html').then(response => response.text()),
-                fetch('Footer.html').then(response => response.text())
-            ]).then(data => {
-                document.getElementById('navbar').innerHTML = data[0];
-                document.getElementById('footer').innerHTML = data[1];
-            });
-        });
-
-    </script>
+    <script src="script.js"> </script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@
   <main class="flex flex-row space-x-6 p-4 bg-gray-50 mt-20">
     <div class="flex-1 space-y-4">
       <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
-      <div class="bg-white p-4 rounded shadow flex justify-between items-center">
+      <div class="bg-white p-4 rounded shadow flex justify-between items-center hover:shadow-lg">
         <div class="flex items-center space-x-4">
           <img src="https://via.placeholder.com/50" alt="Heirloom tomato" class="w-16 h-16 object-cover">
           <div>
@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <div class="bg-white p-4 rounded shadow flex justify-between items-center">
+      <div class="bg-white p-4 rounded shadow flex justify-between items-center hover:shadow-lg">
         <div class="flex items-center space-x-4">
           <img src="https://via.placeholder.com/50" alt="Organic ginger" class="w-16 h-16 object-cover">
           <div>
@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <div class="bg-white p-4 rounded shadow flex justify-between items-center">
+      <div class="bg-white p-4 rounded shadow flex justify-between items-center hover:shadow-lg">
         <div class="flex items-center space-x-4">
           <img src="https://via.placeholder.com/50" alt="Sweet onion" class="w-16 h-16 object-cover">
           <div>
@@ -88,23 +88,7 @@
     </div>
   </main>
 
-  <script>
-    function showDropdown() {
-      document.getElementById('dropdownContent').classList.remove('hidden');
-    }
-
-    function hideDropdown() {
-      document.getElementById('dropdownContent').classList.add('hidden');
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar').innerHTML = data;
-        });
-    });
-  </script>
+  <script src="script.js"> </script>
 </body>
 
 </html>
