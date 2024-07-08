@@ -10,6 +10,7 @@ function showDropdown() {
     loadNavbar();
     loadCard();
     loadFooter();
+    setupEditButton();
 });
 
 function loadNavbar() {
@@ -46,4 +47,20 @@ function loadFooter() {
         .catch(error => {
             console.error('Error loading footer:', error);
         });
+}
+
+
+function setupEditButton() {
+    const editButton = document.getElementById('editButton');
+    editButton.addEventListener('click', function () {
+        if (editButton.textContent === 'Edit') {
+            editButton.textContent = 'Save';
+            console.log('Edit mode enabled');
+            // Add your logic to enable editing fields here
+        } else {
+            editButton.textContent = 'Edit';
+            console.log('Edit mode disabled');
+            // Add your logic to save changes here
+        }
+    });
 }
