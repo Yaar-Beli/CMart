@@ -22,7 +22,6 @@ module.exports = (sequelize, DataTypes) => {
     Transaction.associate = function(models) {
         Transaction.belongsTo(models.Order, { foreignKey: 'OrderID' });
     };
-
     return Transaction;
 };
 
