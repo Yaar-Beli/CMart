@@ -30,7 +30,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,  // Assuming Category is a string
             allowNull: true,
             unique: false
-
         },
 
     });
