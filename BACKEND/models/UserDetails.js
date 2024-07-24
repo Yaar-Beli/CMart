@@ -1,42 +1,37 @@
 module.exports = (sequelize, DataTypes) => {
-
-    const UserDetails = sequelize.define('UserDetails',{
-
+    const UserDetails = sequelize.define('UserDetails', {
         UserId: {
             type: DataTypes.INTEGER,
-            allowNull : false,
-            unique : true,
+            allowNull: false,
+            unique: true,
+            primaryKey: true
         },
         FName: {
             type: DataTypes.STRING,
-            allowNull : false,
-            unique :false,
+            allowNull: false
         },
         LName: {
             type: DataTypes.STRING,
-            allowNull : false,
-            unique : false,
+            allowNull: false
         },
         Contact: {
             type: DataTypes.STRING,
-            allowNull : false,
-            unique : true,
+            allowNull: false,
+            unique: true
         },
         DOB: {
             type: DataTypes.DATE,
-            allowNull : false,
-            unique : false,
+            allowNull: false
         },
         Address: {
             type: DataTypes.STRING,
-            allowNull : false,
-            unique : false,
+            allowNull: false
         },
         Photo: {
             type: DataTypes.BLOB('long'),
-            allowNull : true,
-            unique : false,
-        },
+            allowNull: true
+        }
+    });
 
-    })
-}
+    return UserDetails;
+};
