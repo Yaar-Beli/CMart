@@ -32,10 +32,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
-    Order.associate = function(models) {
-        //Order.belongsTo(models.Address, { foreignKey: 'Address' });
-        Order.belongsTo(models.User, { foreignKey: 'UserID' });
-    };
+    // Order.associate = function(models) {
+    //     //Order.belongsTo(models.Address, { foreignKey: 'Address' });
+    //     Order.belongsTo(models.User, { foreignKey: 'UserID' });
+    // };
 
     return Order;
 };

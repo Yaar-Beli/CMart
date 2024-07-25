@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Cart = sequelize.define('Cart', {
         UserID: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             references: {
                 model: 'UserDetails',
