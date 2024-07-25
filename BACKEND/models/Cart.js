@@ -4,16 +4,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'Users',
-                key: 'id'
+                model: 'UserDetails',
+                key: 'UserID'
             }
         },
         ProductID: {
             type: DataTypes.STRING,
             allowNull: false,
             references: {
-                model: 'Products',
-                key: 'id'
+                model: 'Product',
+                key: 'ProductID'
             }
         },
         Quantity: {

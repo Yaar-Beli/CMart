@@ -2,8 +2,10 @@ module.exports = (sequelize, DataTypes) => {
     const UserLogin = sequelize.define('UserLogin', {
         UserID: {
             type: DataTypes.STRING,
-            primaryKey: true,
-            allowNull: false
+            references: {
+                model: 'UserDetails',
+                key: 'UserID'
+            }
         },
         Password: {
             type: DataTypes.STRING,
@@ -28,6 +30,11 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: true
         }
     });
+
+    UserLogin.associate = function(models) {
+        UserLogin.belongsTo(models.User, { foreignKey: 'UserID' });
+        UserLogin.belongsTo(models.Product, { foreignKey: 'ProductID' });
+    };
 
     return UserLogin;
 };

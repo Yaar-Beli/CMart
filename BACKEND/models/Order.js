@@ -1,3 +1,4 @@
+// models/Order.js
 module.exports = (sequelize, DataTypes) => {
     const Order = sequelize.define('Order', {
         OrderID: {
@@ -15,11 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         Address: {
             type: DataTypes.STRING,
-            allowNull: false,
-            references: {
-                model: 'Address', // This should match the name of the Address model
-                key: 'id'
-            }
+            allowNull: false
         },
         Status: {
             type: DataTypes.STRING,
@@ -27,11 +24,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         UserID: {
             type: DataTypes.STRING,
-            allowNull: false,
-            references: {
-                model: 'Users', // This should match the name of the User model
-                key: 'UserID'
-            }
+            allowNull: false
         },
         Details: {
             type: DataTypes.STRING,
@@ -40,12 +33,9 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Order.associate = function(models) {
-        Order.belongsTo(models.Address, { foreignKey: 'Address' });
+        //Order.belongsTo(models.Address, { foreignKey: 'Address' });
         Order.belongsTo(models.User, { foreignKey: 'UserID' });
     };
 
     return Order;
 };
-
-
-//checkkkkkkkkkkkkkkkkkkkkkkkk
