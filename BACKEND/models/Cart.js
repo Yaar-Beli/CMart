@@ -4,16 +4,16 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'Users',
-                key: 'id'
+                model: 'UserDetails',
+                key: 'UserID'
             }
         },
         productId: {
             type: DataTypes.INTEGER, // Assuming ProductID is an integer, if not, keep it as STRING
             allowNull: false,
             references: {
-                model: 'Products',
-                key: 'id'
+                model: 'Product',
+                key: 'ProductID'
             }
         },
         quantity: {

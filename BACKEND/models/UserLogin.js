@@ -29,5 +29,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
+    UserLogin.associate = function(models) {
+        UserLogin.belongsTo(models.User, { foreignKey: 'UserID' });
+        UserLogin.belongsTo(models.Product, { foreignKey: 'ProductID' });
+    };
+
     return UserLogin;
 };

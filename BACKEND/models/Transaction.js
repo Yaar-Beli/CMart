@@ -1,3 +1,4 @@
+// models/Transaction.js
 module.exports = (sequelize, DataTypes) => {
     const Transaction = sequelize.define('Transaction', {
         TransactionID: {
@@ -13,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false,
             references: {
-                model: 'Orders',
-                key: 'id'
+                model: 'Order', // Ensure this matches the name of the Order table
+                key: 'OrderID'
             }
         }
     });
@@ -22,8 +23,6 @@ module.exports = (sequelize, DataTypes) => {
     Transaction.associate = function(models) {
         Transaction.belongsTo(models.Order, { foreignKey: 'OrderID' });
     };
+
     return Transaction;
 };
-
-
-//checkkkkkkkkkkkkkkkkkkkkk

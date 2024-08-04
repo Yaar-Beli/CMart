@@ -1,11 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
-    const stock = sequelize.define('stock', {
+    const Stock = sequelize.define('stock', {
         ProductID: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'stock', // This should match the name of the Product model
-                key: 'id'
+                model: 'Product', // This should match the name of the Product model
+                key: 'ProductID'
             }
         },
         Quantity: {
@@ -14,11 +14,11 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
-    stock.associate = function(models) {
-        stock.belongsTo(models.Product, { foreignKey: 'ProductID' });
+    Stock.associate = function(models) {
+        Stock.belongsTo(models.Product, { foreignKey: 'ProductID' });
     };
 
-    return stock;
+    return Stock;
 };
 
 
