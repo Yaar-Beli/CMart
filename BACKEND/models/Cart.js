@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     const Cart = sequelize.define('Cart', {
-        UserID: {
+        userId: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -8,27 +8,33 @@ module.exports = (sequelize, DataTypes) => {
                 key: 'id'
             }
         },
-        ProductID: {
-            type: DataTypes.STRING,
+        productId: {
+            type: DataTypes.INTEGER, // Assuming ProductID is an integer, if not, keep it as STRING
             allowNull: false,
             references: {
                 model: 'Products',
                 key: 'id'
             }
         },
-        Quantity: {
+        quantity: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                min: 1
+            }
         },
-        CartAmount: {
-            type: DataTypes.NUMERIC,
-            allowNull: false
+        cartAmount: {
+            type: DataTypes.DECIMAL(10, 2),
+            allowNull: false,
+            validate: {
+                min: 0
+            }
         }
     });
 
     Cart.associate = function(models) {
-        Cart.belongsTo(models.User, { foreignKey: 'UserID' });
-        Cart.belongsTo(models.Product, { foreignKey: 'ProductID' });
+        Cart.belongsTo(models.User, { foreignKey: 'userId' });
+        Cart.belongsTo(models.Product, { foreignKey: 'productId' });
     };
 
     return Cart;

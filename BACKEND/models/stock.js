@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const stock = sequelize.define('stock', {
         ProductID: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'stock', // This should match the name of the Product model
