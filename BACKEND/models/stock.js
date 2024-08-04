@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "Products",
+        model: "Product",
         key: "ProductID",
       },
     },
@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Stock.associate = function (models) {
-    Stock.hasMany(models.Products, { foreignKey: "ProductID" });
+    Stock.hasMany(models.Product, { foreignKey: "ProductID" });
   };
 
   return Stock;

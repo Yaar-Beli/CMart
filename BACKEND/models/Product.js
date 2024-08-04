@@ -31,14 +31,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER, 
       allowNull: true,
       references: {
-        model: "Categories", // This should match the name of the Product model
+        model: "Category", // This should match the name of the Product model
         key: "CategoryID",
       },
     },
   });
 
   Product.associate = function (models) {
-    Product.hasMany(models.Categories, { foreignKey: "CategoryID" });
+    Product.hasMany(models.Category, { foreignKey: "CategoryID" });
   };
   return Product;
 };
