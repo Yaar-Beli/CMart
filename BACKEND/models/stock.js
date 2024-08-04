@@ -1,28 +1,24 @@
 module.exports = (sequelize, DataTypes) => {
-    const Stock = sequelize.define('stock', {
-        ProductID: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'Product', // This should match the name of the Product model
-                key: 'ProductID'
-            }
-        },
-        Quantity: {
-            type: DataTypes.NUMERIC,
-            allowNull: false
-        }
-    });
+  const Stock = sequelize.define("Stock", {
+    ProductID: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "Products",
+        key: "ProductID",
+      },
+    },
+    Quantity: {
+      type: DataTypes.NUMERIC,
+      allowNull: false,
+    },
+  });
 
-    Stock.associate = function(models) {
-        Stock.belongsTo(models.Product, { foreignKey: 'ProductID' });
-    };
+  Stock.associate = function (models) {
+    Stock.hasMany(models.Products, { foreignKey: "ProductID" });
+  };
 
-    return Stock;
+  return Stock;
 };
-
-
-
-
 
 //checkkkkkkkkkkkkkkkkkkkkkkkkkkkk
