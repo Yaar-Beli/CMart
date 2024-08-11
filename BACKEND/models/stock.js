@@ -3,10 +3,6 @@ module.exports = (sequelize, DataTypes) => {
     ProductID: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: "Product",
-        key: "ProductID",
-      },
     },
     Quantity: {
       type: DataTypes.NUMERIC,
@@ -15,10 +11,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Stock.associate = function (models) {
-    Stock.hasMany(models.Product, { foreignKey: "ProductID" });
+    Stock.belongsTo(models.Product, { foreignKey: "ProductID" });
   };
 
   return Stock;
 };
-
-//checkkkkkkkkkkkkkkkkkkkkkkkkkkkk

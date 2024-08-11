@@ -1,13 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   const UserLogin = sequelize.define("UserLogin", {
-    userID: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "UserDetails",
-        key: "UserID",
-      },
-    },
     Password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -33,8 +25,11 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   UserLogin.associate = function (models) {
-    UserLogin.hasMany(models.UserDetails, { foreignKey: "UserID" });
-    UserLogin.hasMany(models.Product, { foreignKey: "ProductID" });
+    UserLogin.belongsTo(models.UserDetails, {
+      foreignKey: "UserID",
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE",
+    });
   };
 
   return UserLogin;

@@ -13,15 +13,11 @@ module.exports = (sequelize, DataTypes) => {
     OrderID: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: "Order", // Ensure this matches the name of the Order table
-        key: "OrderID",
-      },
     },
   });
 
   Transaction.associate = function (models) {
-    Transaction.hasMany(models.Order, { foreignKey: "OrderID" });
+    Transaction.belongsTo(models.Order, { foreignKey: "OrderID" });
   };
 
   return Transaction;

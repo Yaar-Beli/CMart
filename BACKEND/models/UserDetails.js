@@ -33,5 +33,16 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 
+  UserDetails.associate = function (models) {
+    UserDetails.hasOne(models.UserLogin, {
+      foreignKey: "UserID",
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE",
+    });
+    UserDetails.hasMany(models.Order, {
+      foreignKey: "UserID",
+    });
+  };
+
   return UserDetails;
 };

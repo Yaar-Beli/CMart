@@ -1,44 +1,44 @@
-const { Product } = require(".");
-
 module.exports = (sequelize, DataTypes) => {
   const Product = sequelize.define("Product", {
     ProductID: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      unique: true,
       primaryKey: true,
+      allowNull: false,
       autoIncrement: true,
     },
-
     Quantity: {
       type: DataTypes.INTEGER,
       allowNull: true,
-      unique: false,
     },
-
     Description: {
       type: DataTypes.STRING,
       allowNull: true,
-      unique: false,
     },
-
     Price: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
-      unique: false,
     },
-    Category: {
-      type: DataTypes.INTEGER, 
-      allowNull: true,
-      references: {
-        model: "Category", // This should match the name of the Product model
-        key: "CategoryID",
-      },
+    CategoryID: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      allowNull: false,
     },
   });
 
   Product.associate = function (models) {
-    Product.hasMany(models.Category, { foreignKey: "CategoryID" });
+    Product.belongsTo(models.Category, {
+      foreignKey: "CategoryID",
+      onDelete: "CASCADE",
+      onUpdate: "CASCADE",
+    });
   };
+
   return Product;
 };

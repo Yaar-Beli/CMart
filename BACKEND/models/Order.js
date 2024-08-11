@@ -10,16 +10,12 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     Amount: {
-      type: DataTypes.NUMERIC, //DECIMAL COUNTS
+      type: DataTypes.NUMERIC,
       allowNull: false,
     },
     Address: {
       type: DataTypes.STRING,
       allowNull: false,
-      // references: {
-      //     model: 'Address', // This should match the name of the Address model
-      //     key: 'id'
-      // }
     },
     Status: {
       type: DataTypes.STRING,
@@ -28,10 +24,6 @@ module.exports = (sequelize, DataTypes) => {
     UserID: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: "UserDetails", // This should match the name of the User model
-        key: "UserID",
-      },
     },
     Details: {
       type: DataTypes.STRING,
@@ -40,11 +32,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Order.associate = function (models) {
-    // Order.hasMany(models.Address, { foreignKey: 'Address' });
-    Order.hasMany(models.UserDetails, { foreignKey: "UserID" });
+    Order.belongsTo(models.UserDetails, { foreignKey: "UserID" });
+    Order.hasMany(models.Transaction, { foreignKey: "OrderID" });
   };
 
   return Order;
 };
-
-//checkkkkkkkkkkkkkkkkkkkkkkkk
