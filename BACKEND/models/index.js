@@ -22,6 +22,7 @@ db.Order = require("./Order")(sequelize, Sequelize);
 db.Stock = require("./Stock")(sequelize, Sequelize);
 db.Transaction = require("./Transaction")(sequelize, Sequelize);
 db.UserLogin = require("./UserLogin")(sequelize, Sequelize);
+db.Cart = require("./Cart")(sequelize, Sequelize);
 
 // Define associations
 Object.keys(db).forEach((modelName) => {
@@ -31,11 +32,21 @@ Object.keys(db).forEach((modelName) => {
 });
 
 // Sync models
+// (async () => {
+//   try {
+//     // Sync all models
+//     await sequelize.sync({ force: true });
+//     console.log("Database & tables created!");
+//   } catch (error) {
+//     console.error("Error syncing models:", error);
+//   }
+// })();
+// Sync models
 (async () => {
   try {
-    // Sync all models
+    // Sync all models with alter option
     await sequelize.sync({ force: true });
-    console.log("Database & tables created!");
+    console.log("Database & tables updated!");
   } catch (error) {
     console.error("Error syncing models:", error);
   }
