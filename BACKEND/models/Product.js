@@ -10,6 +10,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+
+    Name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     Description: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -30,6 +35,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       allowNull: false,
     },
+    Show:{
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    }
   });
 
   Product.associate = function (models) {

@@ -31,6 +31,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BLOB,
       allowNull: true,
     },
+    Disable:{
+      type: DataTypes.BOOLEAN,
+      allowNull:false
+    }
   });
 
   UserDetails.associate = function (models) {

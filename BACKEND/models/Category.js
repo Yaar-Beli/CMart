@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    Show:{
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    }
   });
 
   Category.associate = function (models) {
