@@ -1,7 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
+
+
+document.addEventListener("DOMContentLoaded", function () {
     const Form = document.getElementById('form');
     const SubmitButton = document.getElementById('SubmitButton');
 
+    VerifyUser();
     // Add an event listener to handle form submission
     Form.addEventListener('submit', function (event) {
         // Prevent the default form submission behavior
@@ -9,11 +12,22 @@ document.addEventListener("DOMContentLoaded", function() {
         // Disable the submit button to prevent multiple submissions
         SubmitButton.disabled = true;
         // Call the function to handle user creation
-        VerifyUser(Form, SubmitButton);
+        LoginUser(Form, SubmitButton);
     });
 });
 
-async function VerifyUser(Form, SubmitButton) {
+async function VerifyUser(params) {
+
+    const Token = localStorage.getItem('authToken')
+    if (!Token) {
+        window.location.replace("../HTML/Login.html");
+        SubmitButton.disabled = false;
+    } else {
+        window.location.replace("../HTML/HomePage.html");
+    }
+}
+
+async function LoginUser(Form, SubmitButton) {
     const Email = document.getElementById('email').value;
     const Password = document.getElementById('password').value;
 
@@ -28,7 +42,7 @@ async function VerifyUser(Form, SubmitButton) {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(LoginCredentials)   
+            body: JSON.stringify(LoginCredentials)
         });
 
         const data = await response.json();
@@ -40,7 +54,7 @@ async function VerifyUser(Form, SubmitButton) {
             // Example: Store the token in localStorage
             localStorage.setItem('authToken', token);
 
-            window.location.replace("./HomePage.html")
+            window.location.replace("../HTML/HomePage.html")
 
             // Reset the form and re-enable the submit button
             Form.reset();
