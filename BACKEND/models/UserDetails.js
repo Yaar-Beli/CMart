@@ -5,6 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true,
       primaryKey: true,
+      autoIncrement: true,
     },
     FName: {
       type: DataTypes.STRING,
@@ -31,10 +32,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BLOB,
       allowNull: true,
     },
-    Disable:{
-      type: DataTypes.BOOLEAN,
-      allowNull:false
-    }
+    // Enable:{
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull:false,
+    //   defaultValue : true
+    // }
   });
 
   UserDetails.associate = function (models) {

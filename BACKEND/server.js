@@ -5,17 +5,19 @@ const db = require("./models");
 
 require("dotenv").config();
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT;
 
 //MiddleWare
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json()); // Middleware to parse JSON bodiesd
 const ProductRoutes = require("./routes/ProductRoutes");
-const CategoryRoutes = require("./routes/CategoryRoutes")
+const CategoryRoutes = require("./routes/CategoryRoutes");
+const AuthRoutes = require("./routes/auth");
 
 app.use("/product",ProductRoutes);
 app.use("/category",CategoryRoutes);
+app.use("/auth", AuthRoutes);
 //db.sequelize.sync();
 // app.post("/users", async (req, res) => {
 //   try {
