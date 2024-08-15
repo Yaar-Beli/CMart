@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const Form = document.getElementById('form');
     const SubmitButton = document.getElementById('SubmitButton');
 
-    VerifyUser();
+     VerifyUser();
+    // if (window.location.pathname.includes("HomePage.html")) {
+    //     VerifyUser();
+    // }
     // Add an event listener to handle form submission
     Form.addEventListener('submit', function (event) {
         // Prevent the default form submission behavior
@@ -19,12 +22,31 @@ document.addEventListener("DOMContentLoaded", function () {
 async function VerifyUser(params) {
 
     const Token = localStorage.getItem('authToken')
-    if (!Token) {
-        window.location.replace("../HTML/Login.html");
-        SubmitButton.disabled = false;
-    } else {
-        window.location.replace("../HTML/HomePage.html");
-    }
+    // if (!Token) {
+    //     window.location.replace("../HTML/Login.html");
+    //    // SubmitButton.disabled = false;
+    // }
+    //  else {
+    //     window.location.replace("../HTML/HomePage.html");
+    // }
+
+
+     // Decode the token
+     const decodedToken = jwt_decode(Token);
+     console.log(decodedToken.exp)
+
+     // Get the current time in seconds since the epoch
+     const currentTime = Math.floor(Date.now() / 1000);
+ 
+     if (decodedToken.exp < currentTime) {
+         // Token has expired, remove it from localStorage and redirect to login
+         localStorage.removeItem('authToken');
+         alert("Session has expired. Please log in again.");
+         window.location.replace("../HTML/Login.html");
+     } else {
+         // Token is valid, proceed to the homepage
+         window.location.replace("../HTML/HomePage.html");
+     }
 }
 
 async function LoginUser(Form, SubmitButton) {
