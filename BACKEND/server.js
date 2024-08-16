@@ -10,16 +10,18 @@ const PORT = process.env.PORT || 3000;
 //MiddleWare
 app.use(cors());
 app.use(morgan("dev"));
-app.use(express.json()); // Middleware to parse JSON bodiesd
+app.use(express.json()); // Middleware to parse JSON bodies
+
 const ProductRoutes = require("./routes/ProductRoutes");
 const CategoryRoutes = require("./routes/CategoryRoutes");
 const AuthRoutes = require("./routes/auth");
+const OrderRoutes = require("./routes/OrderRoutes");
 
-app.use("/product",ProductRoutes);
-app.use("/category",CategoryRoutes);
+app.use("/product", ProductRoutes);
+app.use("/category", CategoryRoutes);
 app.use("/auth", AuthRoutes);
+app.use("/orders", OrderRoutes);
 
-  
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
