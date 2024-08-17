@@ -2,7 +2,7 @@ const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
 const sequelize = new Sequelize(
-  "postgresql://KuwarJ:Pass123@localhost:5432/CMart",
+  "postgresql://Rakshit:Pass123@localhost:5432/CMart",
   {
     dialect: "postgres",
     logging: false,
