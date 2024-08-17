@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const Form = document.getElementById('form');
     const SubmitButton = document.getElementById('SubmitButton');
 
-     VerifyUser();
+    VerifyUser();
     // if (window.location.pathname.includes("HomePage.html")) {
     //     VerifyUser();
     // }

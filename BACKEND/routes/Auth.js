@@ -111,9 +111,12 @@ router.post("/login", async (req, res) => {
   // Extract email and password from the request body
   const { Email, Password } = req.body;
   console.log("email", Email);
+
+  const EmailToLowerCase = Email.toLowerCase();
+
   try {
     // Find the user with the given email
-    const UserToVerify = await db.UserLogin.findOne({ where: { Email } });
+    const UserToVerify = await db.UserLogin.findOne({ where: { Email : EmailToLowerCase } });
 
     if (!UserToVerify) {
       return res.status(404).json({ message: "Invalid credentials" });
@@ -131,7 +134,7 @@ router.post("/login", async (req, res) => {
 
     // Generate a JWT token
     const token = Jwt.sign({ id: UserToVerify.UserID }, SECRET_KEY, {
-      expiresIn: "24h",
+      expiresIn: "1m",
     });
 
     // Respond with the token and UserID

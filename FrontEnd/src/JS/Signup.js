@@ -54,6 +54,7 @@ async function CreateUser() {
         if (response.ok) {
             // Show a success message
             alert("Account Created successfully!");
+            window.location.replace("../HTML/Login")
             // Reset the form fields
             Form.reset();
         } else {
