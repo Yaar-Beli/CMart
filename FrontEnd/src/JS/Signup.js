@@ -39,7 +39,7 @@ async function CreateUser() {
 
     try {
         // Send the user data to the server
-        const response = await fetch("http://localhost:3000/auth/createUser", {
+        const response = await fetch("http://localhost:3000/user/createUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

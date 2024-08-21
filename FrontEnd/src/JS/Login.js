@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const Form = document.getElementById('form');
     const SubmitButton = document.getElementById('SubmitButton');
 
-    VerifyUser();
+    // VerifyUser();
     // if (window.location.pathname.includes("HomePage.html")) {
     //     VerifyUser();
     // }
@@ -42,7 +42,7 @@ async function VerifyUser(params) {
          // Token has expired, remove it from localStorage and redirect to login
          localStorage.removeItem('authToken');
          alert("Session has expired. Please log in again.");
-         window.location.replace("../HTML/Login.html");
+       //  window.location.replace("../HTML/Login.html");
      } else {
          // Token is valid, proceed to the homepage
          window.location.replace("../HTML/HomePage.html");
@@ -75,9 +75,9 @@ async function LoginUser(Form, SubmitButton) {
 
             // Example: Store the token in localStorage
             localStorage.setItem('authToken', token);
-
+      
             window.location.replace("../HTML/HomePage.html")
-
+  
             // Reset the form and re-enable the submit button
             Form.reset();
             SubmitButton.disabled = false;
@@ -107,3 +107,5 @@ async function LoginUser(Form, SubmitButton) {
         SubmitButton.disabled = false;
     }
 }
+
+

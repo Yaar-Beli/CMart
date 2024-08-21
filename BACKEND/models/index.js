@@ -2,7 +2,7 @@ const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
 const sequelize = new Sequelize(
-  "postgresql://Rakshit:Pass123@localhost:5432/CMart",
+  process.env.DATABASE_URL,
   {
     dialect: "postgres",
     logging: false,
