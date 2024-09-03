@@ -35,6 +35,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE,
       allowNull: false,
     },
+    Photo: {
+      type: DataTypes.BLOB,
+      allowNull: true,
+    },
     Show:{
       type: DataTypes.BOOLEAN,
       allowNull: false

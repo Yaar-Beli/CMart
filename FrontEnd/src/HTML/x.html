@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img class="h-8 w-auto"
+                            src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#"
+                                class="text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium">Men</a>
+                            <a href="#"
+                                class="text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium">Women</a>
+                            <a href="#"
+                                class="text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium">Kids</a>
+                            <a href="#"
+                                class="text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium">Sale</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="#"
+                        class="text-gray-800 hover:text-gray-500 px-3 py-2 rounded-md text-sm font-medium">Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-96"
+        style="background-image: url('https://images.unsplash.com/photo-1606813901440-028e4bdf1a2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwzNjUyOXwwfDF8c2VhcmNofDF8fG5pa2V8ZW58MHx8fA&ixlib=rb-1.2.1&q=80&w=1080');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center text-white flex flex-col items-center justify-center h-full">
+            <h1 class="text-4xl font-bold">Just Do It</h1>
+            <p class="mt-4 text-lg">Shop the latest Nike collections</p>
+            <a href="#"
+                class="mt-6 px-8 py-3 bg-white text-gray-800 font-semibold rounded-md hover:bg-gray-200 transition">Shop
+                Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <h2 class="text-2xl font-bold mb-6">Featured Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img class="w-full h-48 object-cover rounded-t-lg"
+                    src="https://images.unsplash.com/photo-1515734674582-29010bb37906?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwzNjUyOXwwfDF8c2VhcmNofDZ8fHNob2VzfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1080"
+                    alt="Product 1">
+                <h3 class="text-lg font-bold mt-4">Nike Air Max</h3>
+                <p class="text-gray-600 mt-2">$120.00</p>
+                <a href="#"
+                    class="block mt-4 px-4 py-2 text-center text-white bg-gray-800 rounded-md hover:bg-gray-700">Buy
+                    Now</a>
+            </div>
+            <!-- Repeat for other products -->
+        </div>
+    </section>
+</body>
+
+</html>

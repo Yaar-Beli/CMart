@@ -45,7 +45,7 @@ Object.keys(db).forEach((modelName) => {
 (async () => {
   try {
     // Sync all models with alter option
-    await sequelize.sync();
+    await sequelize.sync({force: true});
     console.log("Database & tables updated!");
   } catch (error) {
     console.error("Error syncing models:", error);
