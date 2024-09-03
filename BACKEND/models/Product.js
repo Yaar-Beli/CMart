@@ -36,13 +36,13 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     Photo: {
-      type: DataTypes.BLOB,
+      type: DataTypes.BLOB("long"),
       allowNull: true,
     },
-    Show:{
+    Show: {
       type: DataTypes.BOOLEAN,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   });
 
   Product.associate = function (models) {

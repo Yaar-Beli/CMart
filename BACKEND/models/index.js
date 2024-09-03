@@ -1,13 +1,10 @@
 const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
-const sequelize = new Sequelize(
-  process.env.DATABASE_URL,
-  {
-    dialect: "postgres",
-    logging: false,
-  }
-);
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  dialect: "postgres",
+  logging: false,
+});
 
 const db = {};
 
@@ -45,7 +42,7 @@ Object.keys(db).forEach((modelName) => {
 (async () => {
   try {
     // Sync all models with alter option
-    await sequelize.sync({force: true});
+    await sequelize.sync();
     console.log("Database & tables updated!");
   } catch (error) {
     console.error("Error syncing models:", error);
